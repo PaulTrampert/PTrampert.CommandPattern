@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PTrampert.CommandPattern")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Command pattern interfaces to be built off of.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Paul Trampert")]
 [assembly: AssemblyProduct("PTrampert.CommandPattern")]
