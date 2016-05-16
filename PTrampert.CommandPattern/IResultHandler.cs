@@ -2,10 +2,10 @@
 
 namespace PTrampert.CommandPattern
 {
-    public interface IResultHandler<T>
+    public interface IResultHandler<out TReturn>
     {
-        T Success<TResultData>(SuccessResult<TResultData> successResult);
+        TReturn Success<TResultData>(SuccessResult<TResultData> successResult);
 
-        T Failure<TResultData>(FailedResult<TResultData> failedResult);
+        TReturn Failure<TResultData>(FailedResult<TResultData> failedResult);
     }
 }

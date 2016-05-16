@@ -6,6 +6,12 @@ namespace PTrampert.CommandPattern
     public class SuccessResult<TResultData> : IResult
     {
         public TResultData Data { get; set; }
+
+        public SuccessResult(TResultData data = default(TResultData))
+        {
+            Data = data;
+        }
+
         public T ExecuteOn<T>(IResultHandler<T> handler)
         {
             return handler.Success(this);
