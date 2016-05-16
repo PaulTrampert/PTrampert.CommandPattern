@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTrampert.CommandPattern", "PTrampert.CommandPattern\PTrampert.CommandPattern.csproj", "{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTrampert.CommandPattern.Test", "PTrampert.CommandPattern.Test\PTrampert.CommandPattern.Test.csproj", "{65448B02-7F8B-49F5-9E83-32B027DA1E30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3321255E-638D-46A2-967C-941316E55BAF}"
+	ProjectSection(SolutionItems) = preProject
+		CI.build = CI.build
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

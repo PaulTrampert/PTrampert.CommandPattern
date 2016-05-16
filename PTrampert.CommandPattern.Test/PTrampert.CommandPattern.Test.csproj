@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}</ProjectGuid>
+    <ProjectGuid>{65448B02-7F8B-49F5-9E83-32B027DA1E30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PTrampert.CommandPattern</RootNamespace>
-    <AssemblyName>PTrampert.CommandPattern</AssemblyName>
+    <RootNamespace>PTrampert.CommandPattern.Test</RootNamespace>
+    <AssemblyName>PTrampert.CommandPattern.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
