@@ -9,6 +9,12 @@ namespace PTrampert.CommandPattern
 
         public Exception Exception { get; set; }
 
+        public FailedResult(TResultData data = default(TResultData), Exception exception = null)
+        {
+            Data = data;
+            Exception = exception;
+        }
+
         public T ExecuteOn<T>(IResultHandler<T> handler)
         {
             return handler.Failure(this);
