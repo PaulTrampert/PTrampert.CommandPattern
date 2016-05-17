@@ -18,7 +18,7 @@ namespace PTrampert.CommandPattern
             Registry = new ConcurrentDictionary<Type, Func<ICommandHandler>>();
         }
 
-        public void Register<TCommand>(Func<ICommandHandler<TCommand>> builderFunc)
+        public void Register<TCommand, TResult>(Func<ICommandHandler<TCommand, TResult>> builderFunc)
         {
             Registry.Add(typeof(TCommand), builderFunc);
         }

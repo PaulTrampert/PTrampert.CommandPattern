@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 
 namespace PTrampert.CommandPattern
 {
-    public interface ICommandHandler<in TCommand> : ICommandHandler
+    public interface ICommandHandler<in TCommand, TResult> : ICommandHandler
     {
-        IResult Handle(TCommand command);
+        TResult Handle(TCommand command);
 
-        Task<IResult> HandleAsync(TCommand command);
+        Task<TResult> HandleAsync(TCommand command);
     }
 
     public interface ICommandHandler
     {
-        IResult Handle(object command);
+        object Handle(object command);
 
-        Task<IResult> HandleAsync(object command);
+        Task<object> HandleAsync(object command);
     }
 }

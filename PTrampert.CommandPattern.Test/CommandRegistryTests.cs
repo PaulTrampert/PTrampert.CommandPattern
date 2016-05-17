@@ -29,7 +29,7 @@ namespace PTrampert.CommandPattern.Test
             Registry.Register(() => new FakeCommandHandler());
             var command = new FakeCommand();
             var handler = Registry.GetCommandHandler(command.GetType());
-            Assert.That(handler.Handle(command), Is.AssignableFrom(typeof(SuccessResult<bool>)));
+            Assert.That(handler.Handle(command), Is.EqualTo(1));
         }
 
         [Test]
@@ -38,7 +38,7 @@ namespace PTrampert.CommandPattern.Test
             Registry.Register(() => new FakeCommandHandler());
             var command = new FakeCommand();
             var handler = Registry.GetCommandHandler(command.GetType());
-            Assert.That(await handler.HandleAsync(command), Is.AssignableFrom(typeof(SuccessResult<bool>)));
+            Assert.That(await handler.HandleAsync(command), Is.EqualTo(2));
         }
     }
 }

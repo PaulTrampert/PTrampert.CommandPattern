@@ -4,8 +4,10 @@ namespace PTrampert.CommandPattern
 {
     public interface IResult
     {
-        T ExecuteOn<T>(IResultHandler<T> handler);
+        TReturn ExecuteOn<TResult, TReturn>(IResultHandler<TResult, TReturn> handler)
+            where TResult : IResult;
 
-        Task<T> ExecuteOnAsync<T>(IAsyncResultHandler<T> handler);
+        Task<TReturn> ExecuteOnAsync<TResult, TReturn>(IAsyncResultHandler<TResult, TReturn> handler) 
+            where TResult : IResult;
     }
 }

@@ -2,10 +2,8 @@
 
 namespace PTrampert.CommandPattern
 {
-    public interface IAsyncResultHandler<T>
+    public interface IAsyncResultHandler<TResult, TReturn>
+        where TResult : IResult
     {
-        Task<T> SuccessAsync<TResultData>(SuccessResult<TResultData> successResult);
-
-        Task<T> FailureAsync<TResultData>(FailedResult<TResultData> failedResult);
     }
 }

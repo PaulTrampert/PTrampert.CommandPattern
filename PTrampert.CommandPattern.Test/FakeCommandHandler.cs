@@ -3,16 +3,16 @@ using System.Threading.Tasks;
 
 namespace PTrampert.CommandPattern.Test
 {
-    public class FakeCommandHandler : CommandHandlerBase<FakeCommand>
+    public class FakeCommandHandler : CommandHandlerBase<FakeCommand, int>
     {
-        public override IResult Handle(FakeCommand command)
+        public override int Handle(FakeCommand command)
         {
-            return new SuccessResult<bool>();
+            return 1;
         }
 
-        public override async Task<IResult> HandleAsync(FakeCommand command)
+        public override async Task<int> HandleAsync(FakeCommand command)
         {
-            return await Task.FromResult(new SuccessResult<bool>());
+            return await Task.FromResult(2);
         }
     }
 }

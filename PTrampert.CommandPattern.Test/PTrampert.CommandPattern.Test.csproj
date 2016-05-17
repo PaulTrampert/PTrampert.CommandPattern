@@ -48,7 +48,6 @@
     <Compile Include="FakeCommand.cs" />
     <Compile Include="FakeCommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResultTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
