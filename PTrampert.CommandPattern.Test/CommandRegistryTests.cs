@@ -24,6 +24,13 @@ namespace PTrampert.CommandPattern.Test
         }
 
         [Test]
+        public void CanRetrieveStronglyTypedCommandHandlers()
+        {
+            Registry.Register(() => new FakeCommandHandler());
+            Assert.That(Registry.GetCommandHandler<FakeCommand, int>(typeof(FakeCommand)), Is.AssignableTo<FakeCommandHandler>());
+        }
+
+        [Test]
         public void RegistryBuiltHandlersCanHandleCommands()
         {
             Registry.Register(() => new FakeCommandHandler());
