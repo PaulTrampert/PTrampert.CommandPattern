@@ -45,10 +45,7 @@
     </Compile>
     <Compile Include="CommandHandlerBase.cs" />
     <Compile Include="CommandRegistry.cs" />
-    <Compile Include="IAsyncResultHandler.cs" />
     <Compile Include="ICommandHandler.cs" />
-    <Compile Include="IResult.cs" />
-    <Compile Include="IResultHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
