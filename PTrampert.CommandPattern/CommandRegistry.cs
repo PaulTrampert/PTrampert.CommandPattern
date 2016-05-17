@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
@@ -21,6 +22,11 @@ namespace PTrampert.CommandPattern
         public void Register<TCommand, TResult>(Func<ICommandHandler<TCommand, TResult>> builderFunc)
         {
             Registry.Add(typeof(TCommand), builderFunc);
+        }
+
+        public ICommandHandler<TCommand, TResult> GetCommandHandler<TCommand, TResult>(Type commandType)
+        {
+            return (ICommandHandler<TCommand, TResult>) GetCommandHandler(commandType);
         }
 
         public ICommandHandler GetCommandHandler(Type commandType)
