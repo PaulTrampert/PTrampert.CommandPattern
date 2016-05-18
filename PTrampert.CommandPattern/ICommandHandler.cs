@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 namespace PTrampert.CommandPattern
 {
     public interface ICommandHandler<in TCommand, TResult> : ICommandHandler
+        where TCommand : ICommand<TResult>
     {
         TResult Handle(TCommand command);
 

@@ -45,6 +45,7 @@
     </Compile>
     <Compile Include="CommandHandlerBase.cs" />
     <Compile Include="CommandRegistry.cs" />
+    <Compile Include="ICommand.cs" />
     <Compile Include="ICommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

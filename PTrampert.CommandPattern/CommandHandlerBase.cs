@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PTrampert.CommandPattern
 {
-    public abstract class CommandHandlerBase<TCommand, TResult> : ICommandHandler<TCommand, TResult>
+    public abstract class CommandHandlerBase<TCommand, TResult> : ICommandHandler<TCommand, TResult> 
+        where TCommand : ICommand<TResult>
     {
         public object Handle(object command)
         {

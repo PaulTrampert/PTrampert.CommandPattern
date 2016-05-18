@@ -1,6 +1,6 @@
 ﻿namespace PTrampert.CommandPattern.Test
 {
-    public class FakeCommand
+    public class FakeCommand : ICommand<int>
     {
     }
 }
