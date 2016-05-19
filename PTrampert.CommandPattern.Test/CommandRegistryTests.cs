@@ -27,7 +27,7 @@ namespace PTrampert.CommandPattern.Test
         public void CanRetrieveStronglyTypedCommandHandlers()
         {
             Registry.Register(() => new FakeCommandHandler());
-            Assert.That(Registry.GetCommandHandler<FakeCommand, int>(typeof(FakeCommand)), Is.AssignableTo<FakeCommandHandler>());
+            Assert.That(Registry.GetCommandHandler<FakeCommand, int>(), Is.AssignableTo<FakeCommandHandler>());
         }
 
         [Test]
@@ -35,8 +35,8 @@ namespace PTrampert.CommandPattern.Test
         {
             Registry.Register(() => new FakeCommandHandler());
             var command = new FakeCommand();
-            var handler = Registry.GetCommandHandler(command.GetType());
-            Assert.That(handler.Handle(command), Is.EqualTo(1));
+            var result = Registry.ExecuteCommand<FakeCommand, int>(command);
+            Assert.That(result, Is.EqualTo(1));
         }
 
         [Test]
@@ -44,8 +44,8 @@ namespace PTrampert.CommandPattern.Test
         {
             Registry.Register(() => new FakeCommandHandler());
             var command = new FakeCommand();
-            var handler = Registry.GetCommandHandler(command.GetType());
-            Assert.That(await handler.HandleAsync(command), Is.EqualTo(2));
+            var result = await Registry.ExecuteCommandAsync<FakeCommand, int>(command);
+            Assert.That(result, Is.EqualTo(2));
         }
     }
 }
