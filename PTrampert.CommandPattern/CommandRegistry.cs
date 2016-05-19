@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PTrampert.CommandPattern
 {
-    public class CommandRegistry
+    public class CommandRegistry : ICommandRegistry
     {
         private IDictionary<Type, Func<ICommandHandler>> Registry { get; }
 

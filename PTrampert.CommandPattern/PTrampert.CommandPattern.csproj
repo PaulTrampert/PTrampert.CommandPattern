@@ -47,6 +47,7 @@
     <Compile Include="CommandRegistry.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="ICommandHandler.cs" />
+    <Compile Include="ICommandRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
