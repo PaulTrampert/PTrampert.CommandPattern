@@ -25,6 +25,18 @@ namespace PTrampert.CommandPattern
             Registry.Add(typeof(TCommand), builderFunc);
         }
 
+        public object ExecuteCommand(object command)
+        {
+            var handler = GetCommandHandler(command.GetType());
+            return handler.Handle(command);
+        }
+
+        public async Task<object> ExecuteCommandAsync(object command)
+        {
+            var handler = GetCommandHandler(command.GetType());
+            return await handler.HandleAsync(command);
+        }
+
         public TResult ExecuteCommand<TCommand, TResult>(TCommand command)
             where TCommand : ICommand<TResult>
         {
