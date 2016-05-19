@@ -25,10 +25,24 @@ namespace PTrampert.CommandPattern
             Registry.Add(typeof(TCommand), builderFunc);
         }
 
-        public ICommandHandler<TCommand, TResult> GetCommandHandler<TCommand, TResult>(Type commandType) 
+        public TResult ExecuteCommand<TCommand, TResult>(TCommand command)
             where TCommand : ICommand<TResult>
         {
-            return (ICommandHandler<TCommand, TResult>) GetCommandHandler(commandType);
+            var handler = GetCommandHandler<TCommand, TResult>();
+            return handler.Handle(command);
+        } 
+
+        public async Task<TResult> ExecuteCommandAsync<TCommand, TResult>(TCommand command)
+            where TCommand : ICommand<TResult>
+        {
+            var handler = GetCommandHandler<TCommand, TResult>();
+            return await handler.HandleAsync(command);
+        }
+
+        public ICommandHandler<TCommand, TResult> GetCommandHandler<TCommand, TResult>() 
+            where TCommand : ICommand<TResult>
+        {
+            return (ICommandHandler<TCommand, TResult>) GetCommandHandler(typeof(TCommand));
         }
 
         public ICommandHandler GetCommandHandler(Type commandType)
