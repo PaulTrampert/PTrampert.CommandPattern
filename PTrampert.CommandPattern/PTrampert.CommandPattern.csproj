@@ -45,10 +45,16 @@
     </Compile>
     <Compile Include="CommandHandlerBase.cs" />
     <Compile Include="CommandRegistry.cs" />
+    <Compile Include="CreatedResult.cs" />
+    <Compile Include="DeletedResult.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="ICommandHandler.cs" />
     <Compile Include="ICommandRegistry.cs" />
+    <Compile Include="IWriteResult.cs" />
+    <Compile Include="IWriteResultHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdatedResult.cs" />
+    <Compile Include="WriteFailedResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PTrampert.CommandPattern.nuspec" />
