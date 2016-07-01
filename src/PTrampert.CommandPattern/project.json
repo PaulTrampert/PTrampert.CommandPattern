@@ -7,6 +7,6 @@
     "netstandard1.1": {}
   },
   "tools": {
-    "dotnet-version": "1.0.0"
+    "dotnet-version": "1.0.*"
   }
 }
