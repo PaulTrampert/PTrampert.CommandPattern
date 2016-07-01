@@ -1,10 +1,17 @@
-﻿{
-  "version": "3.3.0-*",
-  "authors": [ "Paul Trampert" ],
+{
+  "version": "3.3.0",
+  "authors": [
+    "Paul Trampert"
+  ],
   "description": "Command pattern interfaces to be built off of.",
   "packOptions": {
-    "owners": [ "Paul Trampert" ],
-    "tags": [ "Command", "Commands" ],
+    "owners": [
+      "Paul Trampert"
+    ],
+    "tags": [
+      "Command",
+      "Commands"
+    ],
     "licenseUrl": "http://www.opensource.org/licenses/MIT",
     "projectUrl": "https://github.com/PaulTrampert/PTrampert.CommandPattern"
   },
@@ -12,8 +19,7 @@
     "NETStandard.Library": "1.6.0"
   },
   "configurations": {
-    "Debug": {
-    },
+    "Debug": {},
     "Release": {
       "buildOptions": {
         "optimize": true
