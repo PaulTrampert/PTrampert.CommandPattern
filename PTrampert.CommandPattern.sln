@@ -3,19 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTrampert.CommandPattern", "PTrampert.CommandPattern\PTrampert.CommandPattern.csproj", "{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{43710946-B1CC-442A-BCB8-4D1EB0528644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTrampert.CommandPattern.Test", "PTrampert.CommandPattern.Test\PTrampert.CommandPattern.Test.csproj", "{65448B02-7F8B-49F5-9E83-32B027DA1E30}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3321255E-638D-46A2-967C-941316E55BAF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8855CDF6-7374-4704-8393-83593DE41D2B}"
 	ProjectSection(SolutionItems) = preProject
-		CI.build = CI.build
-		Version.cs = Version.cs
+		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PTrampert.CommandPattern.Core", "PTrampert.CommandPattern.Core\PTrampert.CommandPattern.Core.xproj", "{23438169-9411-4B6F-AC27-4E9F72FA7E2F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{31D1DD42-F8CB-4C83-8EE4-E365E31D1672}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PTrampert.CommandPattern.Core.Test", "PTrampert.CommandPattern.Core.Test\PTrampert.CommandPattern.Core.Test.xproj", "{95A7CD51-C65E-4151-A2E3-7BA952490C1E}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PTrampert.CommandPattern", "src\PTrampert.CommandPattern\PTrampert.CommandPattern.xproj", "{23438169-9411-4B6F-AC27-4E9F72FA7E2F}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PTrampert.CommandPattern.Test", "test\PTrampert.CommandPattern.Test\PTrampert.CommandPattern.Test.xproj", "{95A7CD51-C65E-4151-A2E3-7BA952490C1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +22,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47DE227F-C9FF-40B2-86C9-797E2EC4BF9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65448B02-7F8B-49F5-9E83-32B027DA1E30}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23438169-9411-4B6F-AC27-4E9F72FA7E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23438169-9411-4B6F-AC27-4E9F72FA7E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23438169-9411-4B6F-AC27-4E9F72FA7E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,5 +33,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{23438169-9411-4B6F-AC27-4E9F72FA7E2F} = {43710946-B1CC-442A-BCB8-4D1EB0528644}
+		{95A7CD51-C65E-4151-A2E3-7BA952490C1E} = {31D1DD42-F8CB-4C83-8EE4-E365E31D1672}
 	EndGlobalSection
 EndGlobal
