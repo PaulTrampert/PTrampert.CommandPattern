@@ -15,9 +15,7 @@
     "licenseUrl": "http://www.opensource.org/licenses/MIT",
     "projectUrl": "https://github.com/PaulTrampert/PTrampert.CommandPattern"
   },
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
+  "dependencies": {},
   "configurations": {
     "Debug": {},
     "Release": {
@@ -27,7 +25,12 @@
     }
   },
   "frameworks": {
-    "netstandard1.1": {}
+    "netstandard1.1": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      }
+    },
+    "net45":{}
   },
   "tools": {
     "dotnet-version": "1.*"
