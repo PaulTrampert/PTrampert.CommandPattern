@@ -1,5 +1,5 @@
 {
-  "version": "3.2.1-*",
+  "version": "3.2.1",
   "authors": [
     "Paul Trampert"
   ],
@@ -30,7 +30,7 @@
         "NETStandard.Library": "1.6.0"
       }
     },
-    "net45":{}
+    "net45": {}
   },
   "tools": {
     "dotnet-version": "1.*"
